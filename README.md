@@ -37,3 +37,13 @@ graph TD
 
     F -- "Load > 0.10" --> G[ALERT: RED LED]
     F -- "Load < 0.10" --> H[STATUS: GREEN LED]
+
+## 📺 Live Simulation Preview
+
+### 🟢 System Normal
+```bash
+[VirtuOS]: Scanning Sensors...
+[TEMP: 38.4 C] [LOAD: 0.08] | STATUS: SYSTEM NOMINAL
+
+[VirtuOS]: WARNING - Threshold Exceeded!
+[TEMP: 52.1 C] [LOAD: 0.55] | STATUS: !! OVERHEAT/OVERLOAD !!
