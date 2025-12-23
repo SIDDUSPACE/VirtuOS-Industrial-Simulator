@@ -17,8 +17,6 @@ VirtuOS Industrial Simulator is a specialized **Embedded Linux** application des
 ## 🧩 System Architecture
 The project follows a **Producer-Consumer** design pattern. The logic is decoupled to ensure that sensor data collection remains independent of the user interface.
 
-
-
 ```mermaid
 graph TD
     subgraph "Linux Kernel Space (/proc)"
