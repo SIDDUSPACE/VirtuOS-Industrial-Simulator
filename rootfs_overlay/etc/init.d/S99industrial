@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    echo "Starting VirtuOS Industrial Hub..."
+    # Start the sensor gatherer in the background
+    /usr/bin/sensor_hub &
+    # Wait a second for files to be created
+    sleep 1
+    # Start the display controller
+    /usr/bin/controller &
+    ;;
+  stop)
+    killall controller
+    killall sensor_hub
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+
+exit 0
